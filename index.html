@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      /*  mini project of grid */
+    .grid-image-display{ 
+        font-family: monospace, sans-serif;
+        font-weight: 700;
+        display: grid;
+        grid-template-rows: auto;
+           grid-template-columns: auto;
+ grid-template-areas:"navbar navbar navbar navbar"
+  "card1 card2 card3 card4"
+ "flash1 flash2 flash3 flash4"
+ "footer footer footer footer";
+ grid-gap: 1.5rem 1.5rem;
+ background-color: #3a3a3a;
+ color: #fff;
+    }
+
+    .navbar{ 
+        grid-area: navbar;
+
+    }
+
+     .navbar ul{ 
+        display: grid;
+        height: 70px;
+        grid-template-columns: repeat(4, 200px);
+        background-color: #000;
+        color: #fff;
+        list-style-type: none;
+    align-items: center;
+    justify-content: space-around;
+    }
+
+     .navbar ul a{ 
+        text-decoration: none;
+        color: #fff;
+        font-size:1.3rem;
+    }
+
+    .navbar #list1{ 
+        grid-column-start: 1;
+        grid-column-end:1;
+    }
+     .navbar #list2{ 
+        grid-column-start: 2;
+        grid-column-end:2;
+    }
+    .navbar  #list3{ 
+        grid-column-start: 3;
+        grid-column-end:3;
+    }
+     .navbar #list4{ 
+        grid-column-start: 4;
+        grid-column-end:4;
+    }
+
+    .card1{ 
+        grid-area: card1;
+        border:0.15rem inset #000;
+        padding: 1.2rem;
+        width: fit-content;
+    }
+      .card2{ 
+        grid-area: card2;
+         border:0.15rem inset #000;
+         padding: 1.2rem;
+          width: fit-content;
+    }
+      .card3{ 
+        grid-area: card3;
+         border:0.15rem inset #000;
+         padding: 1.2rem;
+          width: fit-content;
+    }
+     .card4{ 
+        grid-area: card4;
+         border:0.15rem inset #000;
+         padding: 1.2rem;
+          width: fit-content;
+    }
+
+    .card1 img{ 
+        height: 200px;
+        width: 200px;
+        border-radius: 1.2rem;
+    }
+     .card2 img{ 
+        height: 200px;
+        width: 200px;
+        border-radius: 1.2rem;
+    }
+
+     .card3 img{ 
+        height: 200px;
+        width: 200px;
+        border-radius: 1.2rem;
+    }
+
+     .card4 img{ 
+        height: 200px;
+        width: 200px;
+        border-radius: 1.2rem;
+    }
+
+    /*  flash */
+    
+    .flash1{ 
+        grid-area: flash1;
+        border:0.15rem inset #000;
+        padding: 1.2rem;
+        width: fit-content;
+    }
+      .flash2{ 
+        grid-area: flash2;
+         border:0.15rem inset #000;
+         padding: 1.2rem;
+          width: fit-content;
+    }
+      .flash3{ 
+        grid-area: flash3;
+         border:0.15rem inset #000;
+         padding: 1.2rem;
+          width: fit-content;
+    }
+     .flash4{ 
+        grid-area: flash4;
+         border:0.15rem inset #000;
+         padding: 1.2rem;
+          width: fit-content;
+    }
+
+    .flash1 img{ 
+        height: 200px;
+        width: 200px;
+        border-radius: 1.2rem;
+    }
+     .flash2 img{ 
+        height: 200px;
+        width: 200px;
+        border-radius: 1.2rem;
+    }
+
+     .flash3 img{ 
+        height: 200px;
+        width: 200px;
+        border-radius: 1.2rem;
+    }
+
+     .flash4 img{ 
+        height: 200px;
+        width: 200px;
+        border-radius: 1.2rem;
+    }
+
+    /* soical links */
+     #footer{ 
+        grid-area: footer;
+
+    }
+
+     #footer ul{ 
+        display: grid;
+        height: 70px;
+        grid-template-columns: repeat(4, 200px);
+        background-color: #000;
+        color: #fff;
+        list-style-type: none;
+    align-items: center;
+    justify-content: space-around;
+    }
+
+     #footer ul a{ 
+        text-decoration: none;
+        color: #fff;
+        font-size:1.3rem;
+    }
+
+    #footer #list1{ 
+        grid-column-start: 1;
+        grid-column-end:1;
+    }
+     #footer #list2{ 
+        grid-column-start: 2;
+        grid-column-end:2;
+    }
+     #footer #list3{ 
+        grid-column-start: 3;
+        grid-column-end:3;
+    }
+     #footer #list4{ 
+        grid-column-start: 4;
+        grid-column-end:4;
+    }
+
+    @media screen and (max-width:910px){ 
+        .grid-image-display{
+            grid-template-areas: "navbar navbar"
+            "card1 card2"
+            "card3 card4"
+            "flash1 flash2"
+            "flash3 flash4"
+            "footer footer";
+            
+        }
+        .navbar ul{ 
+grid-template-columns:auto;
+   }
+
+           #footer ul{ 
+grid-template-columns:auto;
+   }
+
+    }
+
+      @media screen and (max-width:410px){ 
+        .grid-image-display{
+            grid-template-areas: "navbar"
+            "card1"
+            "card2"
+            "card3"
+            "card4"
+            "flash1"
+            "flash2"
+            "flash3"
+            "flash4"
+            "footer";
+           
+        }
+                .navbar ul{ 
+grid-template-columns:auto;
+   }
+                 .navbar ul a{ 
+grid-template-columns:auto;
+font-size: 0.7rem;
+   }
+
+                 #footer ul{ 
+grid-template-columns:auto;
+   }
+                 #footer ul a{ 
+grid-template-columns:auto;
+font-size: 0.7rem;
+   }
+
+    }
+   
+
+    </style>
+</head>
+<body>
+    
+  <!--  mini project of grid -->
+
+  <div class="navbar">
+    <ul>
+        <li id="list1"><a href="">home</a></li>
+        <li id="list2"><a href="">products</a></li>
+        <li id="list3"><a href="">services</a></li>
+        <li id="list4"><a href="">about us</a></li>
+    </ul>
+  </div>
+    
+    <div class="grid-image-display">
+<!-- 1 -->
+     <div class="card1">
+<img src="sky.jpg" alt="sky painting">
+<h2>Sky painting</h2>
+<p>hand made painting</p>
+<p>price:1000pkr</p>
+<button>buy now</button>
+ </div>
+
+ <!-- 2 -->
+      <div class="card2">
+<img src="sky.jpg" alt="sky painting">
+<h2>Sky painting</h2>
+<p>hand made painting</p>
+<p>price:1000pkr</p>
+<button>buy now</button>
+ </div>
+
+ <!-- 3 -->
+      <div class="card3">
+<img src="sky.jpg" alt="sky painting">
+<h2>Sky painting</h2>
+<p>hand made painting</p>
+<p>price:1000pkr</p>
+<button>buy now</button>
+ </div>
+
+ <!-- 4 -->
+      <div class="card4">
+<img src="sky.jpg" alt="sky painting">
+<h2>Sky painting</h2>
+<p>hand made painting</p>
+<p>price:1000pkr</p>
+<button>buy now</button>
+ </div>
+
+ <!--  flash  -->
+   <!-- 1 -->
+     <div class="flash1">
+<img src="sky2.webp" alt="sky painting">
+<h2>Sky painting</h2>
+<p>hand made painting</p>
+<p>price:1000pkr</p>
+<button>buy now</button>
+ </div>
+
+ <!-- 2 -->
+      <div class="flash2">
+<img src="sky2.webp" alt="sky painting">
+<h2>Sky painting</h2>
+<p>hand made painting</p>
+<p>price:1000pkr</p>
+<button>buy now</button>
+ </div>
+
+ <!-- 3 -->
+      <div class="flash3">
+<img src="sky2.webp" alt="sky painting">
+<h2>Sky painting</h2>
+<p>hand made painting</p>
+<p>price:1000pkr</p>
+<button>buy now</button>
+ </div>
+
+ <!-- 4 -->
+      <div class="flash4">
+<img src="sky2.webp" alt="sky painting">
+<h2>Sky painting</h2>
+<p>hand made painting</p>
+<p>price:1000pkr</p>
+<button>buy now</button>
+ </div>
+
+
+    </div>
+
+    <footer id="footer">
+        <ul>
+            <li><a href="">facebook</a></li>
+            <li><a href="">instagram</a></li>
+            <li><a href="">twitter</a></li>
+            <li><a href="">youtube</a></li>
+        </ul>
+    </footer>
+   
+
+</body>
+</html>
